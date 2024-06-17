@@ -1,5 +1,5 @@
 import sys # Provides information about exceptions
-import logging # Allows logging of information and errors
+from src.logger import logging 
 
 def error_message_detail(error, error_detail: sys): # Function to create a detailed error message when an exception is raised
     _, _, exc_tb = error_detail.exc_info() # Extract the traceback object which contains information about the exception
@@ -17,4 +17,3 @@ class CustomException(Exception): # Define a custom exception class inheriting f
 
     def __str__(self): # Define the string representation of the custom exception
         return self.error_message # Return the detailed error message when the exception is printed or converted to a string
-
